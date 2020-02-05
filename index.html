@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>landing page</title>
+</head>
+<body>
+
+	<div class="container">
+		
+	  <div class="content">
+	  	this is the content
+
+
+	  	
+	  </div>
+
+	  <div class="floating-content">
+
+	  	<div class="close-btn">
+
+
+	  		<i class="far fa-window-close fa-4x"></i>
+
+	  		
+	  	</div>
+	  	<div class="display-form">
+	  		<form action="">
+	  			<label>Name</label>
+
+	  			<input type="text" name="name">
+
+	  			<label>Email</label>
+	  			<input type="text" name="email">
+
+	  			<button type="submit" class="btn">Submit</button>
+	  		</form>
+	  		
+	  	</div>
+
+	  	
+
+	  </div>
+	</div>
+
+	<style type="text/css">
+		
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.container{
+
+			height:100vh;
+			position: relative;
+			background:#fff;
+		}
+		.content{
+			/*color:#fff;*/
+		}
+
+
+		.floating-content{
+			position: absolute;
+			top: 0;
+			height: 100vh;
+			z-index: 2;
+			background: rgba(0,0,0,0.8);
+			width: 100%;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+				visibility: hidden;
+
+				transition: 0.3s;
+
+
+		}
+
+		.display-form{
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			width:500px;
+			background: #000;
+			color: #fff;
+			height:400px;
+			padding:10px;
+
+		
+			/*transition: 10s;*/
+
+		}
+
+		.close-btn{
+			position: fixed;
+			right: 15px;
+			top: 10px;
+			color:#fff;
+			padding: 15px;
+		}
+		.far{
+			color: #fff;
+			cursor: pointer;
+		}
+       input[type="text"]{
+       	padding: 15px;
+       
+
+		width:90%;
+		margin:5px 20px;
+		outline-style: hidden;
+		display: inline-block;
+
+
+       }
+
+       .btn{
+       	padding: 15px;
+       margin:10px 20px;
+       	width: 70%;
+       	display: inline-block;
+
+       	font-weight: bold;
+
+
+
+
+
+       	/*border: none;*/
+       }
+
+       .btn:hover{
+
+       	background: #333;
+       	color:#fff;
+
+
+
+       }
+
+       label{
+       	color:red;
+       	display:block;
+       }
+     @media (max-width: 400px) {
+
+     	input[type="text"]{
+     		
+     		width: 60%;
+     	}
+
+     	.display-form{
+     		/*margin: 5px;*/
+     		
+     		padding: 10px;
+     		height: 100vh;
+     	}
+     	.close-btn{
+     		padding: 0;
+
+     	}
+
+     	.btn{
+     		width: 50%;
+     	}
+
+     	
+     }
+	</style>
+
+	<script src="https://kit.fontawesome.com/0575292d25.js" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+
+	  // get the form
+	  let float=document.querySelector(".floating-content")
+
+	  /*get cursor*/
+	  let far=document.querySelector(".far")
+	  far.addEventListener("click",()=>{
+	  	float.style.visibility="hidden"
+	  })
+		
+
+		setTimeout(()=>{
+
+			if (float) {
+				float.style.visibility="visible"
+			// alert("Sqwd")
+
+				// statement
+			}
+
+			
+
+			// form.style.display="block"
+
+		},3000)
+	</script>
+	
+</body>
+</html>
